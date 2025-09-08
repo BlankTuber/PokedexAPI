@@ -3,6 +3,8 @@ use rocket::{
     serde::json::{Json, Value, json},
 };
 
+mod models;
+
 #[macro_use]
 extern crate rocket;
 
