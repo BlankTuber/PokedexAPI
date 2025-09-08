@@ -8,7 +8,7 @@ pub struct Pokemon {
     pub gender_ratio: f64,
     pub evolution_chain_id: i16,
     pub relation_group_id: Option<i16>,
-    pub generation_introduced: i8,
+    pub generation_introduced: u8,
     pub is_legendary: bool,
     pub is_mythical: bool,
     pub is_baby: bool,
