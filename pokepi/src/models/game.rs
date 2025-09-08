@@ -7,4 +7,7 @@ pub struct Game {
     pub game_identifier: String,
     pub generation: u8,
     pub version_group_id: i16,
+    pub release_date: String,
+    pub platform_id: i16,
+    pub is_main_series: bool,
 }

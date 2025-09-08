@@ -1,7 +1,7 @@
 use serde::Serialize;
 
 #[derive(Debug, Serialize)]
-pub struct PokemonFormAbiltiy {
+pub struct PokemonFormAbilitiy {
     pub pokemon_form_game_id: i16,
     pub ability_id: i16,
     pub slot: i8,
