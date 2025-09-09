@@ -9,7 +9,13 @@ pub struct Ability {
     pub is_main_series: bool,
 }
 
-pub type CreateAbility = Ability;
+#[derive(Debug, Deserialize, Clone)]
+pub struct CreateAbility {
+    pub ability_name: String,
+    pub ability_identifier: String,
+    pub generation_introduced: u8,
+    pub is_main_series: bool,
+}
 
 // Route: PATCH /abilities/<ability_id>
 #[derive(Debug, Deserialize, Clone)]
