@@ -1,6 +1,7 @@
 pub mod ability;
 pub mod ability_description;
 pub mod egg_group;
+pub mod encounter;
 pub mod encounter_method;
 pub mod game;
 pub mod growth_rate;

@@ -2,7 +2,7 @@ use serde::Serialize;
 
 #[derive(Debug, Serialize)]
 pub struct PokemonFormType {
-    pub pokemon_form_game_id: i16,
-    pub type_id: i8,
-    pub slot: i8,
+    pub pokemon_form_game_id: u32,
+    pub type_id: u8,
+    pub slot: u8,
 }

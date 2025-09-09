@@ -2,12 +2,12 @@ use serde::Serialize;
 
 #[derive(Debug, Serialize)]
 pub struct Game {
-    pub game_id: i16,
+    pub game_id: u16,
     pub game_name: String,
     pub game_identifier: String,
     pub generation: u8,
-    pub version_group_id: i16,
+    pub version_group_id: u16,
     pub release_date: String,
-    pub platform_id: i16,
+    pub platform_id: u16,
     pub is_main_series: bool,
 }
