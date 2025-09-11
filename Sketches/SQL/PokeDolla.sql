@@ -167,7 +167,6 @@ CREATE TABLE "encounters" (
   "location_area_id" integer NOT NULL,                 
   "encounter_method_id" smallint NOT NULL,             
   "chance" smallint NOT NULL,                          
-  "encounter_conditions_id" integer NOT NULL           
 );
 
 CREATE TABLE "encounter_condition_values" (
@@ -177,7 +176,7 @@ CREATE TABLE "encounter_condition_values" (
 );
 
 CREATE TABLE "encounter_conditions" (
-  "encounter_conditions_id" integer NOT NULL,          
+  "encounter_id" integer NOT NULL,          
   "encounter_condition_value_id" smallint NOT NULL     
 );
 
@@ -206,6 +205,7 @@ CREATE TABLE "pokedex_numbers" (
 
 CREATE TABLE "evolution_chains" (
   "evolution_chain_id" smallint PRIMARY KEY            
+  "evolution_chain_name" text NOT NULL                 
 );
 
 
@@ -245,7 +245,7 @@ ALTER TABLE "encounters" ADD FOREIGN KEY ("game_id") REFERENCES "games" ("game_i
 ALTER TABLE "encounters" ADD FOREIGN KEY ("location_area_id") REFERENCES "location_areas" ("location_area_id");
 ALTER TABLE "encounters" ADD FOREIGN KEY ("encounter_method_id") REFERENCES "encounter_methods" ("encounter_method_id");
 
-ALTER TABLE "encounter_conditions" ADD FOREIGN KEY ("encounter_conditions_id") REFERENCES "encounters" ("encounter_conditions_id");
+ALTER TABLE "encounter_conditions" ADD FOREIGN KEY ("encounter_id") REFERENCES "encounters" ("encounter_id");
 ALTER TABLE "encounter_conditions" ADD FOREIGN KEY ("encounter_condition_value_id") REFERENCES "encounter_condition_values" ("encounter_condition_value_id");
 
 ALTER TABLE "pokedex_entries" ADD FOREIGN KEY ("national_id") REFERENCES "pokemon" ("national_id");

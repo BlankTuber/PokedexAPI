@@ -12,9 +12,17 @@ pub struct Game {
     pub is_main_series: bool,
 }
 
-pub type CreateGame = Game;
+#[derive(Debug, Deserialize, Clone)]
+pub struct CreateGame {
+    pub game_name: String,
+    pub game_identifier: String,
+    pub generation: u8,
+    pub version_group_id: u16,
+    pub release_date: String,
+    pub platform_id: u16,
+    pub is_main_series: bool,
+}
 
-// Route: PATCH /games/<game_id>
 #[derive(Debug, Deserialize, Clone)]
 pub struct UpdateGame {
     pub game_name: Option<String>,

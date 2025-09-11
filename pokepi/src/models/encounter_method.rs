@@ -7,9 +7,12 @@ pub struct EncounterMethod {
     pub method_identifier: String,
 }
 
-pub type CreateEncounterMethod = EncounterMethod;
+#[derive(Debug, Deserialize, Clone)]
+pub struct CreateEncounterMethod {
+    pub method_name: String,
+    pub method_identifier: String,
+}
 
-// Route: PATCH /encounter-methods/<encounter_method_id>
 #[derive(Debug, Deserialize, Clone)]
 pub struct UpdateEncounterMethod {
     pub method_name: Option<String>,

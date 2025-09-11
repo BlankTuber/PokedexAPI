@@ -22,7 +22,6 @@ pub struct Pokemon {
 
 pub type CreatePokemon = Pokemon;
 
-// Route: PATCH /pokemon/<national_id>
 #[derive(Debug, Deserialize, Clone)]
 pub struct UpdatePokemon {
     pub species_name: Option<String>,

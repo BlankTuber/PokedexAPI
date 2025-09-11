@@ -7,9 +7,12 @@ pub struct EggGroup {
     pub egg_group_identifier: String,
 }
 
-pub type CreateEggGroup = EggGroup;
+#[derive(Debug, Deserialize, Clone)]
+pub struct CreateEggGroup {
+    pub egg_group_name: String,
+    pub egg_group_identifier: String,
+}
 
-// Route: PATCH /egg-groups/<egg_group_id>
 #[derive(Debug, Deserialize, Clone)]
 pub struct UpdateEggGroup {
     pub egg_group_name: Option<String>,

@@ -7,9 +7,12 @@ pub struct EncounterConditionValue {
     pub value_identifier: String,
 }
 
-pub type CreateEncounterConditionValue = EncounterConditionValue;
+#[derive(Debug, Deserialize, Clone)]
+pub struct CreateEncounterConditionValue {
+    pub value_name: String,
+    pub value_identifier: String,
+}
 
-// Route: PATCH /encounter-condition-values/<encounter_condition_value_id>
 #[derive(Debug, Deserialize, Clone)]
 pub struct UpdateEncounterConditionValue {
     pub value_name: Option<String>,

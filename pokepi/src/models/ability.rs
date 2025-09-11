@@ -17,7 +17,6 @@ pub struct CreateAbility {
     pub is_main_series: bool,
 }
 
-// Route: PATCH /abilities/<ability_id>
 #[derive(Debug, Deserialize, Clone)]
 pub struct UpdateAbility {
     pub ability_name: Option<String>,

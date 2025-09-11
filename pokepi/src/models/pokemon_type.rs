@@ -8,9 +8,13 @@ pub struct PokemonType {
     pub generation_introduced: u8,
 }
 
-pub type CreatePokemonType = PokemonType;
+#[derive(Debug, Deserialize, Clone)]
+pub struct CreatePokemonType {
+    pub type_name: String,
+    pub type_identifier: String,
+    pub generation_introduced: u8,
+}
 
-// Route: PATCH /types/<type_id>
 #[derive(Debug, Deserialize, Clone)]
 pub struct UpdatePokemonType {
     pub type_name: Option<String>,
