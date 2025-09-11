@@ -166,7 +166,7 @@ CREATE TABLE "encounters" (
   "game_id" smallint NOT NULL,
   "location_area_id" integer NOT NULL,
   "encounter_method_id" smallint NOT NULL,
-  "chance" smallint NOT NULL,
+  "chance" smallint NOT NULL
 );
 
 CREATE TABLE "encounter_condition_values" (
@@ -204,7 +204,7 @@ CREATE TABLE "pokedex_numbers" (
 );
 
 CREATE TABLE "evolution_chains" (
-  "evolution_chain_id" smallint PRIMARY KEY
+  "evolution_chain_id" smallint PRIMARY KEY,
   "evolution_chain_name" text NOT NULL  
 );
 
