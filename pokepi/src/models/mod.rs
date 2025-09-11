@@ -9,7 +9,7 @@ pub mod evolution_chain;
 pub mod game;
 pub mod growth_rate;
 pub mod location;
-pub mod location_areas;
+pub mod location_area;
 pub mod platform;
 pub mod pokedex_entry;
 pub mod pokedex_number;
