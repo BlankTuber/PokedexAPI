@@ -29,7 +29,7 @@ async fn rocket() -> _ {
 
     let pool = PgPoolOptions::new()
         .max_connections(5)
-        .connect(&std::env::var("DB_URL").expect("DB_URL is missing!"))
+        .connect(&std::env::var("DATABASE_URL").expect("DB_URL is missing!"))
         .await
         .expect("Failed to connect to postgres!");
 
