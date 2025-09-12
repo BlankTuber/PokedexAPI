@@ -18,7 +18,7 @@ CREATE TABLE "pokemon" (
 );
 
 CREATE TABLE "pokemon_forms" (
-  "form_id" smallint PRIMARY KEY,
+  "form_id" smallint GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
   "national_id" smallint NOT NULL,
   "form_name" text NOT NULL,
   "form_identifier" text NOT NULL,
@@ -29,7 +29,7 @@ CREATE TABLE "pokemon_forms" (
 );
 
 CREATE TABLE "pokemon_form_games" (
-  "pokemon_form_game_id" integer PRIMARY KEY,
+  "pokemon_form_game_id" integer GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
   "national_id" smallint NOT NULL,
   "form_id" smallint NOT NULL,
   "game_id" smallint NOT NULL,
@@ -60,7 +60,7 @@ CREATE TABLE "pokemon_form_abilities" (
 );
 
 CREATE TABLE "games" (
-  "game_id" smallint PRIMARY KEY,
+  "game_id" smallint GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
   "game_name" text NOT NULL,
   "game_identifier" text NOT NULL,
   "generation" smallint NOT NULL,
@@ -71,14 +71,14 @@ CREATE TABLE "games" (
 );
 
 CREATE TABLE "version_groups" (
-  "version_group_id" smallint PRIMARY KEY,
+  "version_group_id" smallint GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
   "version_group_name" text NOT NULL,
   "version_group_identifier" text NOT NULL,
   "generation" smallint NOT NULL  
 );
 
 CREATE TABLE "pokemon_types" (
-  "type_id" smallint PRIMARY KEY,
+  "type_id" smallint GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
   "type_name" text NOT NULL,
   "type_identifier" text NOT NULL,
   "generation_introduced" smallint NOT NULL
@@ -91,7 +91,7 @@ CREATE TABLE "type_matchups" (
 );
 
 CREATE TABLE "abilities" (
-  "ability_id" smallint PRIMARY KEY,
+  "ability_id" smallint GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
   "ability_name" text NOT NULL,
   "ability_identifier" text NOT NULL,
   "generation_introduced" smallint NOT NULL,
@@ -107,60 +107,60 @@ CREATE TABLE "ability_descriptions" (
 );
 
 CREATE TABLE "growth_rates" (
-  "growth_rate_id" smallint PRIMARY KEY,
+  "growth_rate_id" smallint GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
   "growth_rate_name" text NOT NULL,
   "growth_rate_identifier" text NOT NULL,
   "formula" text NOT NULL
 );
 
 CREATE TABLE "egg_groups" (
-  "egg_group_id" smallint PRIMARY KEY,
+  "egg_group_id" smallint GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
   "egg_group_name" text NOT NULL,
   "egg_group_identifier" text NOT NULL
 );
 
 CREATE TABLE "platforms" (
-  "platform_id" smallint PRIMARY KEY,
+  "platform_id" smallint GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
   "platform_name" text NOT NULL,
   "platform_identifier" text NOT NULL
 );
 
 CREATE TABLE "relation_groups" (
-  "relation_group_id" smallint PRIMARY KEY,
+  "relation_group_id" smallint GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
   "relation_name" text NOT NULL,
   "relation_identifier" text NOT NULL,
   "relation_description" text NOT NULL
 );
 
 CREATE TABLE "regions" (
-  "region_id" smallint PRIMARY KEY,
+  "region_id" smallint GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
   "region_name" text NOT NULL,
   "region_identifier" text NOT NULL,
   "generation_introduced" smallint NOT NULL
 );
 
 CREATE TABLE "locations" (
-  "location_id" integer PRIMARY KEY,
+  "location_id" integer GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
   "location_name" text NOT NULL,
   "location_identifier" text NOT NULL,
   "region_id" smallint NOT NULL
 );
 
 CREATE TABLE "location_areas" (
-  "location_area_id" integer PRIMARY KEY,
+  "location_area_id" integer GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
   "location_id" integer NOT NULL,
   "area_name" text NOT NULL,
   "area_identifier" text NOT NULL
 );
 
 CREATE TABLE "encounter_methods" (
-  "encounter_method_id" smallint PRIMARY KEY,
+  "encounter_method_id" smallint GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
   "method_name" text NOT NULL,
   "method_identifier" text NOT NULL
 );
 
 CREATE TABLE "encounters" (
-  "encounter_id" integer PRIMARY KEY,
+  "encounter_id" integer GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
   "national_id" smallint NOT NULL,
   "form_id" smallint NOT NULL,
   "game_id" smallint NOT NULL,
@@ -170,7 +170,7 @@ CREATE TABLE "encounters" (
 );
 
 CREATE TABLE "encounter_condition_values" (
-  "encounter_condition_value_id" smallint PRIMARY KEY,
+  "encounter_condition_value_id" smallint GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
   "value_name" text NOT NULL,
   "value_identifier" text NOT NULL
 );
@@ -189,7 +189,7 @@ CREATE TABLE "pokedex_entries" (
 );
 
 CREATE TABLE "regional_pokedexes" (
-  "pokedex_id" smallint PRIMARY KEY,
+  "pokedex_id" smallint GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
   "pokedex_name" text NOT NULL,
   "pokedex_identifier" text NOT NULL,
   "region_id" smallint NOT NULL,
@@ -204,7 +204,7 @@ CREATE TABLE "pokedex_numbers" (
 );
 
 CREATE TABLE "evolution_chains" (
-  "evolution_chain_id" smallint PRIMARY KEY,
+  "evolution_chain_id" smallint GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
   "evolution_chain_name" text NOT NULL  
 );
 

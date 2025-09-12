@@ -1,35 +1,39 @@
-use rocket::{
-    http::Status,
-    serde::json::{Json, Value, json},
-};
+use dotenv::dotenv;
+use rocket::serde::json::{Json, Value, json};
+use sqlx::postgres::PgPoolOptions;
 
 mod models;
 
 #[macro_use]
 extern crate rocket;
 
-#[get("/<name>")]
-fn hello(name: &str) -> Result<Json<Value>, Status> {
-    Ok(Json(json!({
-      "message": format!("Hello {}", &name)
-    })))
+#[catch(404)]
+fn not_found() -> Json<Value> {
+    Json(json!({
+      "status": 404,
+      "error": "The path you're trying to access was not found!"
+    }))
 }
 
-#[get("/pokemon")]
-fn pokemon() -> Result<Json<Value>, Status> {
-    Ok(Json(json!({
-      "pokemon": {
-        "name": "Eevee",
-        "type": "Normal",
-        "abilities": ["Run Away", "Adaptability"],
-        "gender": 0.5,
-        "height": 1.0,
-        "weight": 14.3
-      }
-    })))
+#[catch(500)]
+fn internal_error() -> Json<Value> {
+    Json(json!({
+      "status": 500,
+      "error": "Something went wrong on our end!"
+    }))
 }
 
 #[launch]
-fn rocket() -> _ {
-    rocket::build().mount("/", routes![hello, pokemon])
+async fn rocket() -> _ {
+    dotenv().ok();
+
+    let pool = PgPoolOptions::new()
+        .max_connections(5)
+        .connect(&std::env::var("DB_URL").expect("DB_URL is missing!"))
+        .await
+        .expect("Failed to connect to postgres!");
+
+    rocket::build()
+        .manage(pool)
+        .register("/", catchers![not_found, internal_error])
 }
