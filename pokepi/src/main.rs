@@ -3,6 +3,7 @@ use rocket::serde::json::{Json, Value, json};
 use sqlx::postgres::PgPoolOptions;
 
 mod models;
+mod routes;
 
 #[macro_use]
 extern crate rocket;
@@ -35,5 +36,6 @@ async fn rocket() -> _ {
 
     rocket::build()
         .manage(pool)
+        .mount("/misc", routes::misc_routes())
         .register("/", catchers![not_found, internal_error])
 }
