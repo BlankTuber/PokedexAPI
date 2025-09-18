@@ -50,7 +50,7 @@ pub async fn create_egg_group(
 )]
 pub async fn update_egg_group(
     pool: &State<PgPool>,
-    egg_group_id: i16,
+    egg_group_id: i32,
     updated_egg_group_data: Json<UpdateEggGroup>,
 ) -> Result<Json<Value>, Status> {
     let updated_egg_group = updated_egg_group_data.into_inner();
