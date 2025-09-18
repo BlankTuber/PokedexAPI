@@ -2,8 +2,8 @@ use serde::{Deserialize, Serialize};
 
 #[derive(Debug, Serialize, Deserialize, Clone)]
 pub struct AbilityDescription {
-    pub ability_id: u16,
-    pub version_group_id: u16,
+    pub ability_id: i32,
+    pub version_group_id: i32,
     pub flavor_text: String,
     pub short_effect: String,
     pub effect: String,

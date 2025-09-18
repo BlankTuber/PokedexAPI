@@ -2,7 +2,7 @@ use serde::{Deserialize, Serialize};
 
 #[derive(Debug, Serialize, Deserialize, Clone)]
 pub struct GrowthRate {
-    pub growth_rate_id: u8,
+    pub growth_rate_id: i32,
     pub growth_rate_name: String,
     pub growth_rate_identifier: String,
     pub formula: String,

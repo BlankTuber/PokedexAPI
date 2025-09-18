@@ -2,7 +2,7 @@ use serde::{Deserialize, Serialize};
 
 #[derive(Debug, Serialize, Deserialize, Clone)]
 pub struct RelationGroup {
-    pub relation_group_id: u16,
+    pub relation_group_id: i32,
     pub relation_name: String,
     pub relation_identifier: String,
     pub relation_description: String,

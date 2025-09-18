@@ -2,7 +2,7 @@ use serde::{Deserialize, Serialize};
 
 #[derive(Debug, Serialize, Deserialize, Clone)]
 pub struct EvolutionChain {
-    pub evolution_chain_id: u16,
+    pub evolution_chain_id: i32,
     pub evolution_chain_name: String,
 }
 

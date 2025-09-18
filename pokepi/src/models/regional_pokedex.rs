@@ -2,11 +2,11 @@ use serde::{Deserialize, Serialize};
 
 #[derive(Debug, Serialize, Deserialize, Clone)]
 pub struct RegionalPokedex {
-    pub pokedex_id: u16,
+    pub pokedex_id: i32,
     pub pokedex_name: String,
     pub pokedex_identifier: String,
-    pub region_id: u16,
-    pub version_group_id: u16,
+    pub region_id: i32,
+    pub version_group_id: i32,
     pub is_main_series: bool,
 }
 
@@ -14,8 +14,8 @@ pub struct RegionalPokedex {
 pub struct CreateRegionalPokedex {
     pub pokedex_name: String,
     pub pokedex_identifier: String,
-    pub region_id: u16,
-    pub version_group_id: u16,
+    pub region_id: i32,
+    pub version_group_id: i32,
     pub is_main_series: bool,
 }
 

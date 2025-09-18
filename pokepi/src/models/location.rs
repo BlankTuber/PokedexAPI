@@ -2,17 +2,17 @@ use serde::{Deserialize, Serialize};
 
 #[derive(Debug, Serialize, Deserialize, Clone)]
 pub struct Location {
-    pub location_id: u32,
+    pub location_id: i32,
     pub location_name: String,
     pub location_identifier: String,
-    pub region_id: u16,
+    pub region_id: i32,
 }
 
 #[derive(Debug, Deserialize, Clone)]
 pub struct CreateLocation {
     pub location_name: String,
     pub location_identifier: String,
-    pub region_id: u16,
+    pub region_id: i32,
 }
 
 #[derive(Debug, Deserialize, Clone)]

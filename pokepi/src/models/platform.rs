@@ -2,7 +2,7 @@ use serde::{Deserialize, Serialize};
 
 #[derive(Debug, Serialize, Deserialize, Clone)]
 pub struct Platform {
-    pub platform_id: u16,
+    pub platform_id: i32,
     pub platform_name: String,
     pub platform_identifier: String,
 }

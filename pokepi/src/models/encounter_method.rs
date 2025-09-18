@@ -2,7 +2,7 @@ use serde::{Deserialize, Serialize};
 
 #[derive(Debug, Serialize, Deserialize, Clone)]
 pub struct EncounterMethod {
-    pub encounter_method_id: u16,
+    pub encounter_method_id: i32,
     pub method_name: String,
     pub method_identifier: String,
 }

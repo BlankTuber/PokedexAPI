@@ -2,8 +2,8 @@ use serde::{Deserialize, Serialize};
 
 #[derive(Debug, Serialize, Deserialize, Clone)]
 pub struct PokemonForm {
-    pub form_id: u16,
-    pub national_id: u16,
+    pub form_id: i32,
+    pub national_id: i32,
     pub form_name: String,
     pub form_identifier: String,
     pub form_type: String,
@@ -14,7 +14,7 @@ pub struct PokemonForm {
 
 #[derive(Debug, Deserialize, Clone)]
 pub struct CreatePokemonForm {
-    pub national_id: u16,
+    pub national_id: i32,
     pub form_name: String,
     pub form_identifier: String,
     pub form_type: String,
