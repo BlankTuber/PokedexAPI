@@ -1,5 +1,5 @@
 use rocket::{
-    State,
+    Route, State,
     http::Status,
     serde::json::{Json, Value, json},
 };
@@ -67,18 +67,55 @@ pub async fn update_egg_group(
         egg_group_id,
     )
     .execute(pool.inner())
-    .await;
-
-    match result {
-        Ok(query_result) => {
-            if query_result.rows_affected() == 0 {
-                Err(Status::NotFound)
-            } else {
-                Ok(Json(json!({
-                    "message": "Egg group updated successfully",
-                })))
-            }
+    .await
+    .map_err(|e| {
+        eprintln!("Database error: {:?}", e);
+        match e {
+            sqlx::Error::Database(db_err) if db_err.is_unique_violation() => Status::Conflict,
+            _ => Status::InternalServerError,
         }
-        Err(_) => Err(Status::InternalServerError),
+    })?;
+
+    if result.rows_affected() == 0 {
+        Err(Status::NotFound)
+    } else {
+        Ok(Json(json!({
+            "message": "Egg group updated successfully",
+        })))
     }
+}
+
+#[delete("/egg-groups/<egg_group_id>")]
+pub async fn delete_egg_group(
+    pool: &State<PgPool>,
+    egg_group_id: i32,
+) -> Result<Json<Value>, Status> {
+    let result = sqlx::query!(
+        r#"
+        DELETE FROM egg_groups
+        WHERE egg_group_id = $1
+        "#,
+        egg_group_id
+    )
+    .execute(pool.inner())
+    .await
+    .map_err(|e| {
+        eprintln!("Database error: {:?}", e);
+        match e {
+            sqlx::Error::Database(db_err) if db_err.is_foreign_key_violation() => Status::Conflict,
+            _ => Status::InternalServerError,
+        }
+    })?;
+
+    if result.rows_affected() == 0 {
+        Err(Status::NotFound)
+    } else {
+        Ok(Json(json!({
+            "message": "Egg group has been deleted!"
+        })))
+    }
+}
+
+pub fn egg_group_routes() -> Vec<Route> {
+    routes![create_egg_group, update_egg_group, delete_egg_group]
 }
