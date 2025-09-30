@@ -1,0 +1,16 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "\n            UPDATE egg_groups\n            SET egg_group_name = COALESCE($1, egg_group_name), \n                egg_group_identifier = COALESCE($2, egg_group_identifier)\n            WHERE egg_group_id = $3\n            ",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Left": [
+        "Text",
+        "Text",
+        "Int4"
+      ]
+    },
+    "nullable": []
+  },
+  "hash": "212f321bc0eb490f5fb509af9438b588d8a699d15e4309f4d162988f7c98db4f"
+}

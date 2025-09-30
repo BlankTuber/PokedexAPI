@@ -1,0 +1,14 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "\n            DELETE FROM egg_groups WHERE egg_group_id = $1\n            ",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Left": [
+        "Int4"
+      ]
+    },
+    "nullable": []
+  },
+  "hash": "c359bf5e0a3d12f6eadfe6ead906a08ce49a472be737a8cdd36d3f150d90b912"
+}

@@ -1,0 +1,35 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "\n            INSERT INTO egg_groups (egg_group_name, egg_group_identifier)\n            VALUES ($1, $2)\n            RETURNING egg_group_id, egg_group_name, egg_group_identifier\n            ",
+  "describe": {
+    "columns": [
+      {
+        "ordinal": 0,
+        "name": "egg_group_id",
+        "type_info": "Int4"
+      },
+      {
+        "ordinal": 1,
+        "name": "egg_group_name",
+        "type_info": "Text"
+      },
+      {
+        "ordinal": 2,
+        "name": "egg_group_identifier",
+        "type_info": "Text"
+      }
+    ],
+    "parameters": {
+      "Left": [
+        "Text",
+        "Text"
+      ]
+    },
+    "nullable": [
+      false,
+      false,
+      false
+    ]
+  },
+  "hash": "453e963570feeebf5d223fb8bbcd1b80201228a725e81ee19a932ca6f2d98959"
+}

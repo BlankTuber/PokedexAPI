@@ -1,6 +1,6 @@
 {
   "db_name": "PostgreSQL",
-  "query": "\n        INSERT INTO egg_groups (egg_group_name, egg_group_identifier)\n        VALUES ($1, $2)\n        RETURNING egg_group_id, egg_group_name, egg_group_identifier\n        ",
+  "query": "\n            SELECT egg_group_id, egg_group_name, egg_group_identifier\n            FROM egg_groups\n            ORDER BY egg_group_id\n            ",
   "describe": {
     "columns": [
       {
@@ -20,10 +20,7 @@
       }
     ],
     "parameters": {
-      "Left": [
-        "Text",
-        "Text"
-      ]
+      "Left": []
     },
     "nullable": [
       false,
@@ -31,5 +28,5 @@
       false
     ]
   },
-  "hash": "bfd591a98b4234db261fd80f1a28e473a4a110269b6cb7905cc02b4b28a3da59"
+  "hash": "f677bf005f177fdfa2f01c48d5265b6c8119129b8060c60f22644f1f0b9519d9"
 }

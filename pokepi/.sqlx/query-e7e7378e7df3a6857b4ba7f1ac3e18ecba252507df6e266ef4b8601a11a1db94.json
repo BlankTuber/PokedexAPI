@@ -1,0 +1,34 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "\n            SELECT egg_group_id, egg_group_name, egg_group_identifier\n            FROM egg_groups\n            WHERE egg_group_id = $1\n            ",
+  "describe": {
+    "columns": [
+      {
+        "ordinal": 0,
+        "name": "egg_group_id",
+        "type_info": "Int4"
+      },
+      {
+        "ordinal": 1,
+        "name": "egg_group_name",
+        "type_info": "Text"
+      },
+      {
+        "ordinal": 2,
+        "name": "egg_group_identifier",
+        "type_info": "Text"
+      }
+    ],
+    "parameters": {
+      "Left": [
+        "Int4"
+      ]
+    },
+    "nullable": [
+      false,
+      false,
+      false
+    ]
+  },
+  "hash": "e7e7378e7df3a6857b4ba7f1ac3e18ecba252507df6e266ef4b8601a11a1db94"
+}
