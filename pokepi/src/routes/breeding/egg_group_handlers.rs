@@ -1,6 +1,7 @@
 use crate::error::ApiResult;
 use crate::models::egg_group::{CreateEggGroup, EggGroup, UpdateEggGroup};
 use crate::services::egg_group_service::EggGroupService;
+use rocket::http::Status;
 use rocket::{Route, State, serde::json::Json};
 use sqlx::PgPool;
 
@@ -30,15 +31,16 @@ pub async fn update_egg_group(
     pool: &State<PgPool>,
     id: i32,
     data: Json<UpdateEggGroup>,
-) -> ApiResult<Json<()>> {
+) -> ApiResult<Json<EggGroup>> {
     EggGroupService::update_egg_group(pool.inner(), id, data.into_inner()).await?;
-    Ok(Json(()))
+    let egg_group = EggGroupService::get_egg_group(pool.inner(), id).await?;
+    Ok(Json(egg_group))
 }
 
 #[delete("/egg-groups/<id>")]
-pub async fn delete_egg_group(pool: &State<PgPool>, id: i32) -> ApiResult<Json<()>> {
+pub async fn delete_egg_group(pool: &State<PgPool>, id: i32) -> ApiResult<Status> {
     EggGroupService::delete_egg_group(pool.inner(), id).await?;
-    Ok(Json(()))
+    Ok(Status::NoContent)
 }
 
 pub fn egg_group_routes() -> Vec<Route> {
