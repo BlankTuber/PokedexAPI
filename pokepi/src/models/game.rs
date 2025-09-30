@@ -1,3 +1,4 @@
+use chrono::NaiveDate;
 use serde::{Deserialize, Serialize};
 
 #[derive(Debug, Serialize, Deserialize, Clone)]
@@ -7,7 +8,7 @@ pub struct Game {
     pub game_identifier: String,
     pub generation: i16,
     pub version_group_id: i32,
-    pub release_date: String,
+    pub release_date: NaiveDate,
     pub platform_id: i32,
     pub is_main_series: bool,
 }
@@ -18,7 +19,7 @@ pub struct CreateGame {
     pub game_identifier: String,
     pub generation: i16,
     pub version_group_id: i32,
-    pub release_date: String,
+    pub release_date: NaiveDate,
     pub platform_id: i32,
     pub is_main_series: bool,
 }
@@ -29,7 +30,7 @@ pub struct UpdateGame {
     pub game_identifier: Option<String>,
     pub generation: Option<i16>,
     pub version_group_id: Option<i32>,
-    pub release_date: Option<String>,
+    pub release_date: Option<NaiveDate>,
     pub platform_id: Option<i32>,
     pub is_main_series: Option<bool>,
 }

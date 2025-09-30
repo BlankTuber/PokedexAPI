@@ -1,4 +1,4 @@
-use dotenv::dotenv;
+use dotenvy::dotenv;
 use rocket::serde::json::{Json, Value, json};
 use sqlx::postgres::PgPoolOptions;
 
