@@ -40,6 +40,12 @@ async fn rocket() -> _ {
 
     rocket::build()
         .manage(pool)
-        .mount("/misc", routes::misc_routes())
+        .mount("/breeding", routes::breeding_routes())
+        // .mount("/pokemon", routes::pokemon_routes())
+        // .mount("/combat", routes::combat_routes())
+        // .mount("/games", routes::game_data_routes())
+        // .mount("/world", routes::world_routes())
+        // .mount("/encounters", routes::encounter_routes())
+        // .mount("/pokedex", routes::pokedex_routes())
         .register("/", catchers![not_found, internal_error])
 }
