@@ -2,8 +2,12 @@ use dotenv::dotenv;
 use rocket::serde::json::{Json, Value, json};
 use sqlx::postgres::PgPoolOptions;
 
+mod error;
 mod models;
+mod repositories;
 mod routes;
+mod services;
+mod validators;
 
 #[macro_use]
 extern crate rocket;
