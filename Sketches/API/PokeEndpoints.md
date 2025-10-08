@@ -12,11 +12,11 @@
 
 ### Growth Rates
 
-- [ ] `POST /breeding/growth-rates` - Create growth rate
-- [ ] `GET /breeding/growth-rates` - List all growth rates
-- [ ] `GET /breeding/growth-rates/{id}` - Get growth rate by ID
-- [ ] `PATCH /breeding/growth-rates/{id}` - Update growth rate
-- [ ] `DELETE /breeding/growth-rates/{id}` - Delete growth rate
+- [X] `POST /breeding/growth-rates` - Create growth rate
+- [X] `GET /breeding/growth-rates` - List all growth rates
+- [X] `GET /breeding/growth-rates/{id}` - Get growth rate by ID
+- [X] `PATCH /breeding/growth-rates/{id}` - Update growth rate
+- [X] `DELETE /breeding/growth-rates/{id}` - Delete growth rate
 
 ## Pokemon Routes (`/pokemon`)
 
