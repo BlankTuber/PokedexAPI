@@ -122,4 +122,12 @@ impl CommonValidator {
         }
         Ok(())
     }
+
+    /// Validates that a database operation affected at least one row
+    pub fn validate_rows_affected(rows: u64, resource_name: &str) -> ApiResult<()> {
+        if rows == 0 {
+            return Err(ApiError::NotFound(format!("{} not found", resource_name)));
+        }
+        Ok(())
+    }
 }

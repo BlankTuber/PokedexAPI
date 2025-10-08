@@ -1,5 +1,6 @@
 use crate::error::ApiResult;
 use crate::models::egg_group::{CreateEggGroup, EggGroup, UpdateEggGroup};
+use crate::validators::common::CommonValidator;
 use sqlx::PgPool;
 
 pub struct EggGroupRepository;
@@ -68,11 +69,7 @@ impl EggGroupRepository {
         .execute(pool)
         .await?;
 
-        if result.rows_affected() == 0 {
-            return Err(crate::error::ApiError::NotFound(
-                "Egg group not found".to_string(),
-            ));
-        }
+        CommonValidator::validate_rows_affected(result.rows_affected(), "Egg group")?;
 
         Ok(())
     }
@@ -87,11 +84,7 @@ impl EggGroupRepository {
         .execute(pool)
         .await?;
 
-        if result.rows_affected() == 0 {
-            return Err(crate::error::ApiError::NotFound(
-                "Egg group not found".to_string(),
-            ));
-        }
+        CommonValidator::validate_rows_affected(result.rows_affected(), "Egg group")?;
 
         Ok(())
     }
