@@ -1,0 +1,40 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "\n              SELECT growth_rate_id, growth_rate_name, growth_rate_identifier, formula\n              FROM growth_rates\n              WHERE growth_rate_id = $1\n            ",
+  "describe": {
+    "columns": [
+      {
+        "ordinal": 0,
+        "name": "growth_rate_id",
+        "type_info": "Int4"
+      },
+      {
+        "ordinal": 1,
+        "name": "growth_rate_name",
+        "type_info": "Text"
+      },
+      {
+        "ordinal": 2,
+        "name": "growth_rate_identifier",
+        "type_info": "Text"
+      },
+      {
+        "ordinal": 3,
+        "name": "formula",
+        "type_info": "Text"
+      }
+    ],
+    "parameters": {
+      "Left": [
+        "Int4"
+      ]
+    },
+    "nullable": [
+      false,
+      false,
+      false,
+      false
+    ]
+  },
+  "hash": "65e0fbc8062177e8e0206af2cbb09afb1a2941a524f93b98e8c35bb012db9186"
+}

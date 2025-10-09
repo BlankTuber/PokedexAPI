@@ -1,0 +1,17 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "\n              UPDATE growth_rates\n              SET growth_rate_name = COALESCE($1, growth_rate_name),\n                  growth_rate_identifier = COALESCE($2, growth_rate_identifier),\n                  formula = COALESCE($3, formula)\n              WHERE growth_rate_id = $4\n            ",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Left": [
+        "Text",
+        "Text",
+        "Text",
+        "Int4"
+      ]
+    },
+    "nullable": []
+  },
+  "hash": "54a799b5b30db34f33dfc53302e8cc5a114a811c511ca277c2dc75e9edd67eab"
+}

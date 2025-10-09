@@ -1,0 +1,14 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "\n              DELETE FROM growth_rates WHERE growth_rate_id = $1\n            ",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Left": [
+        "Int4"
+      ]
+    },
+    "nullable": []
+  },
+  "hash": "49c2424c1157a057df78639ffe346a2dfa52904114a774715dec01b0df0613ae"
+}

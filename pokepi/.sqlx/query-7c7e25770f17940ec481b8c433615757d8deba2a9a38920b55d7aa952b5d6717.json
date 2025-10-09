@@ -1,0 +1,42 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "\n              INSERT INTO growth_rates (growth_rate_name, growth_rate_identifier, formula)\n              VALUES ($1, $2, $3)\n              RETURNING growth_rate_id, growth_rate_name, growth_rate_identifier, formula\n            ",
+  "describe": {
+    "columns": [
+      {
+        "ordinal": 0,
+        "name": "growth_rate_id",
+        "type_info": "Int4"
+      },
+      {
+        "ordinal": 1,
+        "name": "growth_rate_name",
+        "type_info": "Text"
+      },
+      {
+        "ordinal": 2,
+        "name": "growth_rate_identifier",
+        "type_info": "Text"
+      },
+      {
+        "ordinal": 3,
+        "name": "formula",
+        "type_info": "Text"
+      }
+    ],
+    "parameters": {
+      "Left": [
+        "Text",
+        "Text",
+        "Text"
+      ]
+    },
+    "nullable": [
+      false,
+      false,
+      false,
+      false
+    ]
+  },
+  "hash": "7c7e25770f17940ec481b8c433615757d8deba2a9a38920b55d7aa952b5d6717"
+}
