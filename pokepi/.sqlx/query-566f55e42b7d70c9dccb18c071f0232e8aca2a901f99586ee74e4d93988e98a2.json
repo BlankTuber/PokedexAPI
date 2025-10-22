@@ -1,0 +1,15 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "\n              UPDATE evolution_chains\n              SET evolution_chain_name = COALESCE($1, evolution_chain_name)\n              WHERE evolution_chain_id = $2\n            ",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Left": [
+        "Text",
+        "Int4"
+      ]
+    },
+    "nullable": []
+  },
+  "hash": "566f55e42b7d70c9dccb18c071f0232e8aca2a901f99586ee74e4d93988e98a2"
+}

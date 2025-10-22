@@ -1,0 +1,28 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "\n              INSERT INTO evolution_chains (evolution_chain_name)\n              VALUES ($1)\n              RETURNING evolution_chain_id, evolution_chain_name\n            ",
+  "describe": {
+    "columns": [
+      {
+        "ordinal": 0,
+        "name": "evolution_chain_id",
+        "type_info": "Int4"
+      },
+      {
+        "ordinal": 1,
+        "name": "evolution_chain_name",
+        "type_info": "Text"
+      }
+    ],
+    "parameters": {
+      "Left": [
+        "Text"
+      ]
+    },
+    "nullable": [
+      false,
+      false
+    ]
+  },
+  "hash": "b459d01f77cd8e5685332faf6f31f119acd32713fde706b3c3c217386aa81fd9"
+}

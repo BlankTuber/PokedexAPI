@@ -1,0 +1,28 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "\n              SELECT evolution_chain_id, evolution_chain_name\n              FROM evolution_chains\n              WHERE evolution_chain_id = $1\n            ",
+  "describe": {
+    "columns": [
+      {
+        "ordinal": 0,
+        "name": "evolution_chain_id",
+        "type_info": "Int4"
+      },
+      {
+        "ordinal": 1,
+        "name": "evolution_chain_name",
+        "type_info": "Text"
+      }
+    ],
+    "parameters": {
+      "Left": [
+        "Int4"
+      ]
+    },
+    "nullable": [
+      false,
+      false
+    ]
+  },
+  "hash": "a1b87d6d3af2a91d3f5e1bc35d0dc30a56bc8a1f020cb4c1d2fe241f6b5415c1"
+}

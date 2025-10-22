@@ -1,0 +1,14 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "\n                DELETE FROM evolution_chains WHERE evolution_chain_id = $1\n            ",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Left": [
+        "Int4"
+      ]
+    },
+    "nullable": []
+  },
+  "hash": "ec4ebfb78bb7970bca91d1083f1f0fd6fafdc0405afb807e50eb61acd5e2bf5c"
+}
