@@ -1,0 +1,16 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "\n                DELETE FROM pokedex_entries\n                WHERE national_id = $1 AND form_id = $2 AND game_id = $3\n                ",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Left": [
+        "Int4",
+        "Int4",
+        "Int4"
+      ]
+    },
+    "nullable": []
+  },
+  "hash": "648c2de76c79006a1336ca17bc09e39cb0dc831c7855bd2b6ea7577e12573f40"
+}

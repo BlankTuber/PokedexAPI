@@ -1,0 +1,34 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "\n            SELECT encounter_method_id, method_name, method_identifier\n            FROM encounter_methods\n            WHERE encounter_method_id = $1\n            ",
+  "describe": {
+    "columns": [
+      {
+        "ordinal": 0,
+        "name": "encounter_method_id",
+        "type_info": "Int4"
+      },
+      {
+        "ordinal": 1,
+        "name": "method_name",
+        "type_info": "Text"
+      },
+      {
+        "ordinal": 2,
+        "name": "method_identifier",
+        "type_info": "Text"
+      }
+    ],
+    "parameters": {
+      "Left": [
+        "Int4"
+      ]
+    },
+    "nullable": [
+      false,
+      false,
+      false
+    ]
+  },
+  "hash": "b40341b324a38196cc5ff2c27b61ee37858041312fa2b852e503359265e84604"
+}

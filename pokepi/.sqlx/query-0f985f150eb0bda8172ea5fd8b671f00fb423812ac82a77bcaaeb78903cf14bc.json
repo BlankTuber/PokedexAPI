@@ -1,0 +1,38 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "\n            SELECT pokemon_form_game_id, ability_id, slot, is_hidden\n            FROM pokemon_form_abilities\n            ORDER BY pokemon_form_game_id, slot\n            ",
+  "describe": {
+    "columns": [
+      {
+        "ordinal": 0,
+        "name": "pokemon_form_game_id",
+        "type_info": "Int4"
+      },
+      {
+        "ordinal": 1,
+        "name": "ability_id",
+        "type_info": "Int4"
+      },
+      {
+        "ordinal": 2,
+        "name": "slot",
+        "type_info": "Int2"
+      },
+      {
+        "ordinal": 3,
+        "name": "is_hidden",
+        "type_info": "Bool"
+      }
+    ],
+    "parameters": {
+      "Left": []
+    },
+    "nullable": [
+      false,
+      false,
+      false,
+      false
+    ]
+  },
+  "hash": "0f985f150eb0bda8172ea5fd8b671f00fb423812ac82a77bcaaeb78903cf14bc"
+}

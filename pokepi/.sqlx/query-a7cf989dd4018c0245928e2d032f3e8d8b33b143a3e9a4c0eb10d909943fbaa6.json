@@ -1,0 +1,42 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "\n            INSERT INTO locations (location_name, location_identifier, region_id)\n            VALUES ($1, $2, $3)\n            RETURNING location_id, location_name, location_identifier, region_id\n            ",
+  "describe": {
+    "columns": [
+      {
+        "ordinal": 0,
+        "name": "location_id",
+        "type_info": "Int4"
+      },
+      {
+        "ordinal": 1,
+        "name": "location_name",
+        "type_info": "Text"
+      },
+      {
+        "ordinal": 2,
+        "name": "location_identifier",
+        "type_info": "Text"
+      },
+      {
+        "ordinal": 3,
+        "name": "region_id",
+        "type_info": "Int4"
+      }
+    ],
+    "parameters": {
+      "Left": [
+        "Text",
+        "Text",
+        "Int4"
+      ]
+    },
+    "nullable": [
+      false,
+      false,
+      false,
+      false
+    ]
+  },
+  "hash": "a7cf989dd4018c0245928e2d032f3e8d8b33b143a3e9a4c0eb10d909943fbaa6"
+}

@@ -1,0 +1,16 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "\n            UPDATE location_areas\n            SET area_name = COALESCE($1, area_name),\n                area_identifier = COALESCE($2, area_identifier)\n            WHERE location_area_id = $3\n            ",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Left": [
+        "Text",
+        "Text",
+        "Int4"
+      ]
+    },
+    "nullable": []
+  },
+  "hash": "8ba6480ba5aca4e43c090ee5856ada6b9866ab00bc0d15d1434f4b8a8be65503"
+}

@@ -1,0 +1,21 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "\n            UPDATE games\n            SET game_name = COALESCE($1, game_name),\n                game_identifier = COALESCE($2, game_identifier),\n                generation = COALESCE($3, generation),\n                version_group_id = COALESCE($4, version_group_id),\n                release_date = COALESCE($5, release_date),\n                platform_id = COALESCE($6, platform_id),\n                is_main_series = COALESCE($7, is_main_series)\n            WHERE game_id = $8\n            ",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Left": [
+        "Text",
+        "Text",
+        "Int2",
+        "Int4",
+        "Date",
+        "Int4",
+        "Bool",
+        "Int4"
+      ]
+    },
+    "nullable": []
+  },
+  "hash": "cef5abead8505f001ab2b7be04561ac2b98b70cda5f043114815527195263f93"
+}

@@ -1,0 +1,35 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "\n            INSERT INTO encounter_condition_values (value_name, value_identifier)\n            VALUES ($1, $2)\n            RETURNING encounter_condition_value_id, value_name, value_identifier\n            ",
+  "describe": {
+    "columns": [
+      {
+        "ordinal": 0,
+        "name": "encounter_condition_value_id",
+        "type_info": "Int4"
+      },
+      {
+        "ordinal": 1,
+        "name": "value_name",
+        "type_info": "Text"
+      },
+      {
+        "ordinal": 2,
+        "name": "value_identifier",
+        "type_info": "Text"
+      }
+    ],
+    "parameters": {
+      "Left": [
+        "Text",
+        "Text"
+      ]
+    },
+    "nullable": [
+      false,
+      false,
+      false
+    ]
+  },
+  "hash": "1c851ff38cf4ec573f9f343aaafc791340ca752692d2ac9604ba5dea127a1450"
+}

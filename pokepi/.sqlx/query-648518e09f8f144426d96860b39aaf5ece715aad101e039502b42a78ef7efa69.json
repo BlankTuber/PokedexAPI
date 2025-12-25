@@ -1,0 +1,17 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "\n            UPDATE regions\n            SET region_name = COALESCE($1, region_name),\n                region_identifier = COALESCE($2, region_identifier),\n                generation_introduced = COALESCE($3, generation_introduced)\n            WHERE region_id = $4\n            ",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Left": [
+        "Text",
+        "Text",
+        "Int2",
+        "Int4"
+      ]
+    },
+    "nullable": []
+  },
+  "hash": "648518e09f8f144426d96860b39aaf5ece715aad101e039502b42a78ef7efa69"
+}

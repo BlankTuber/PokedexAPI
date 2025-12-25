@@ -1,0 +1,17 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "\n              UPDATE version_groups\n              SET version_group_name = COALESCE($1, version_group_name),\n                  version_group_identifier = COALESCE($2, version_group_identifier),\n                  generation = COALESCE($3, generation)\n              WHERE version_group_id = $4\n            ",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Left": [
+        "Text",
+        "Text",
+        "Int2",
+        "Int4"
+      ]
+    },
+    "nullable": []
+  },
+  "hash": "29b22c7086dd8f71af96e213342ba8931c2f17a48284cb0b7f0166c286fb0885"
+}

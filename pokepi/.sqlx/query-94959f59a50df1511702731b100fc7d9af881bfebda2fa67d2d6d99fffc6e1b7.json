@@ -1,0 +1,14 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "\n            DELETE FROM regional_pokedexes WHERE pokedex_id = $1\n            ",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Left": [
+        "Int4"
+      ]
+    },
+    "nullable": []
+  },
+  "hash": "94959f59a50df1511702731b100fc7d9af881bfebda2fa67d2d6d99fffc6e1b7"
+}

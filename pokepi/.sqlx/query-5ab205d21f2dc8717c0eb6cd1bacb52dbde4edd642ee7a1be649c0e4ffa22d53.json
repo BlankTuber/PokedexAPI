@@ -1,0 +1,17 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "\n                UPDATE pokedex_entries\n                SET pokedex_number = COALESCE($1, pokedex_number),\n                    entry_text = COALESCE($2, entry_text)\n                WHERE national_id = $3 AND form_id IS NULL AND game_id = $4\n                ",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Left": [
+        "Int4",
+        "Text",
+        "Int4",
+        "Int4"
+      ]
+    },
+    "nullable": []
+  },
+  "hash": "5ab205d21f2dc8717c0eb6cd1bacb52dbde4edd642ee7a1be649c0e4ffa22d53"
+}

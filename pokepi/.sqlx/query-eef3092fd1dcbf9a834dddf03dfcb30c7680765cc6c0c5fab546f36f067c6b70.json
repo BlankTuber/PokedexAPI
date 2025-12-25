@@ -1,0 +1,50 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "\n            INSERT INTO ability_descriptions (ability_id, version_group_id, flavor_text, short_effect, effect)\n            VALUES ($1, $2, $3, $4, $5)\n            RETURNING ability_id, version_group_id, flavor_text, short_effect, effect\n            ",
+  "describe": {
+    "columns": [
+      {
+        "ordinal": 0,
+        "name": "ability_id",
+        "type_info": "Int4"
+      },
+      {
+        "ordinal": 1,
+        "name": "version_group_id",
+        "type_info": "Int4"
+      },
+      {
+        "ordinal": 2,
+        "name": "flavor_text",
+        "type_info": "Text"
+      },
+      {
+        "ordinal": 3,
+        "name": "short_effect",
+        "type_info": "Text"
+      },
+      {
+        "ordinal": 4,
+        "name": "effect",
+        "type_info": "Text"
+      }
+    ],
+    "parameters": {
+      "Left": [
+        "Int4",
+        "Int4",
+        "Text",
+        "Text",
+        "Text"
+      ]
+    },
+    "nullable": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
+  },
+  "hash": "eef3092fd1dcbf9a834dddf03dfcb30c7680765cc6c0c5fab546f36f067c6b70"
+}

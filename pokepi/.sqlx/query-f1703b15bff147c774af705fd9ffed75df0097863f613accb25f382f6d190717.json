@@ -1,0 +1,16 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "\n            UPDATE pokemon_form_types\n            SET slot = COALESCE($1, slot)\n            WHERE pokemon_form_game_id = $2 AND type_id = $3\n            ",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Left": [
+        "Int2",
+        "Int4",
+        "Int4"
+      ]
+    },
+    "nullable": []
+  },
+  "hash": "f1703b15bff147c774af705fd9ffed75df0097863f613accb25f382f6d190717"
+}

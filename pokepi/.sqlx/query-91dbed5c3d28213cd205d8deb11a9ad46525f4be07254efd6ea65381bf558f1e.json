@@ -1,0 +1,40 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "\n            SELECT region_id, region_name, region_identifier, generation_introduced\n            FROM regions\n            WHERE region_id = $1\n            ",
+  "describe": {
+    "columns": [
+      {
+        "ordinal": 0,
+        "name": "region_id",
+        "type_info": "Int4"
+      },
+      {
+        "ordinal": 1,
+        "name": "region_name",
+        "type_info": "Text"
+      },
+      {
+        "ordinal": 2,
+        "name": "region_identifier",
+        "type_info": "Text"
+      },
+      {
+        "ordinal": 3,
+        "name": "generation_introduced",
+        "type_info": "Int2"
+      }
+    ],
+    "parameters": {
+      "Left": [
+        "Int4"
+      ]
+    },
+    "nullable": [
+      false,
+      false,
+      false,
+      false
+    ]
+  },
+  "hash": "91dbed5c3d28213cd205d8deb11a9ad46525f4be07254efd6ea65381bf558f1e"
+}

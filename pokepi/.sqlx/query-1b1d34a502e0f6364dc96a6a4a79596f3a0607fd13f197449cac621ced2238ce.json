@@ -1,0 +1,44 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "\n            SELECT national_id, form_id, game_id, pokedex_number, entry_text\n            FROM pokedex_entries\n            ORDER BY national_id, form_id NULLS FIRST, game_id\n            ",
+  "describe": {
+    "columns": [
+      {
+        "ordinal": 0,
+        "name": "national_id",
+        "type_info": "Int4"
+      },
+      {
+        "ordinal": 1,
+        "name": "form_id",
+        "type_info": "Int4"
+      },
+      {
+        "ordinal": 2,
+        "name": "game_id",
+        "type_info": "Int4"
+      },
+      {
+        "ordinal": 3,
+        "name": "pokedex_number",
+        "type_info": "Int4"
+      },
+      {
+        "ordinal": 4,
+        "name": "entry_text",
+        "type_info": "Text"
+      }
+    ],
+    "parameters": {
+      "Left": []
+    },
+    "nullable": [
+      false,
+      true,
+      false,
+      false,
+      false
+    ]
+  },
+  "hash": "1b1d34a502e0f6364dc96a6a4a79596f3a0607fd13f197449cac621ced2238ce"
+}

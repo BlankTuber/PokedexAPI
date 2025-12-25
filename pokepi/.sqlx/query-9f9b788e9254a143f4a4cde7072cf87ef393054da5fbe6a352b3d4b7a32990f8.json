@@ -1,0 +1,35 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "\n            SELECT national_id, pokedex_id, pokedex_number\n            FROM pokedex_numbers\n            WHERE national_id = $1 AND pokedex_id = $2\n            ",
+  "describe": {
+    "columns": [
+      {
+        "ordinal": 0,
+        "name": "national_id",
+        "type_info": "Int4"
+      },
+      {
+        "ordinal": 1,
+        "name": "pokedex_id",
+        "type_info": "Int4"
+      },
+      {
+        "ordinal": 2,
+        "name": "pokedex_number",
+        "type_info": "Int4"
+      }
+    ],
+    "parameters": {
+      "Left": [
+        "Int4",
+        "Int4"
+      ]
+    },
+    "nullable": [
+      false,
+      false,
+      false
+    ]
+  },
+  "hash": "9f9b788e9254a143f4a4cde7072cf87ef393054da5fbe6a352b3d4b7a32990f8"
+}

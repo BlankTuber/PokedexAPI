@@ -1,0 +1,31 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "\n            UPDATE pokemon\n            SET species_name = COALESCE($1, species_name),\n                classification = COALESCE($2, classification),\n                gender_ratio = COALESCE($3, gender_ratio),\n                evolution_chain_id = COALESCE($4, evolution_chain_id),\n                relation_group_id = CASE WHEN $5 THEN $6 ELSE relation_group_id END,\n                generation_introduced = COALESCE($7, generation_introduced),\n                is_legendary = COALESCE($8, is_legendary),\n                is_mythical = COALESCE($9, is_mythical),\n                is_baby = COALESCE($10, is_baby),\n                capture_rate = COALESCE($11, capture_rate),\n                base_happiness = COALESCE($12, base_happiness),\n                growth_rate_id = COALESCE($13, growth_rate_id),\n                egg_group_1_id = COALESCE($14, egg_group_1_id),\n                egg_group_2_id = CASE WHEN $15 THEN $16 ELSE egg_group_2_id END,\n                hatch_cycles = COALESCE($17, hatch_cycles)\n            WHERE national_id = $18\n            ",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Left": [
+        "Text",
+        "Text",
+        "Float4",
+        "Int4",
+        "Bool",
+        "Int4",
+        "Int2",
+        "Bool",
+        "Bool",
+        "Bool",
+        "Int2",
+        "Int2",
+        "Int4",
+        "Int4",
+        "Bool",
+        "Int4",
+        "Int2",
+        "Int4"
+      ]
+    },
+    "nullable": []
+  },
+  "hash": "735bcd086b21d202ac4d67be893cc30486c746e91c5750e50953b4a095cca767"
+}

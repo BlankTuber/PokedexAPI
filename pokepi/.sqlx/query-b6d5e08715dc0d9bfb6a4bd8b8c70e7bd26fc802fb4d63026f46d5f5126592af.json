@@ -1,0 +1,15 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "\n            DELETE FROM type_matchups\n            WHERE attacking_type_id = $1 AND defending_type_id = $2\n            ",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Left": [
+        "Int4",
+        "Int4"
+      ]
+    },
+    "nullable": []
+  },
+  "hash": "b6d5e08715dc0d9bfb6a4bd8b8c70e7bd26fc802fb4d63026f46d5f5126592af"
+}

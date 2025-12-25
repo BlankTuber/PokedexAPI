@@ -1,0 +1,18 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "\n            UPDATE abilities\n            SET ability_name = COALESCE($1, ability_name),\n                ability_identifier = COALESCE($2, ability_identifier),\n                generation_introduced = COALESCE($3, generation_introduced),\n                is_main_series = COALESCE($4, is_main_series)\n            WHERE ability_id = $5\n            ",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Left": [
+        "Text",
+        "Text",
+        "Int2",
+        "Bool",
+        "Int4"
+      ]
+    },
+    "nullable": []
+  },
+  "hash": "ac73fb6853aaf061b87f173de8037fca014b2c15add70a6d3d8e3bc365d5ede3"
+}

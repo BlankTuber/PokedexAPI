@@ -1,0 +1,127 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "\n            INSERT INTO pokemon (national_id, species_name, classification, gender_ratio, evolution_chain_id,\n                relation_group_id, generation_introduced, is_legendary, is_mythical, is_baby,\n                capture_rate, base_happiness, growth_rate_id, egg_group_1_id, egg_group_2_id, hatch_cycles)\n            VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16)\n            RETURNING national_id, species_name, classification, gender_ratio, evolution_chain_id,\n                relation_group_id, generation_introduced, is_legendary, is_mythical, is_baby,\n                capture_rate, base_happiness, growth_rate_id, egg_group_1_id, egg_group_2_id, hatch_cycles\n            ",
+  "describe": {
+    "columns": [
+      {
+        "ordinal": 0,
+        "name": "national_id",
+        "type_info": "Int4"
+      },
+      {
+        "ordinal": 1,
+        "name": "species_name",
+        "type_info": "Text"
+      },
+      {
+        "ordinal": 2,
+        "name": "classification",
+        "type_info": "Text"
+      },
+      {
+        "ordinal": 3,
+        "name": "gender_ratio",
+        "type_info": "Float4"
+      },
+      {
+        "ordinal": 4,
+        "name": "evolution_chain_id",
+        "type_info": "Int4"
+      },
+      {
+        "ordinal": 5,
+        "name": "relation_group_id",
+        "type_info": "Int4"
+      },
+      {
+        "ordinal": 6,
+        "name": "generation_introduced",
+        "type_info": "Int2"
+      },
+      {
+        "ordinal": 7,
+        "name": "is_legendary",
+        "type_info": "Bool"
+      },
+      {
+        "ordinal": 8,
+        "name": "is_mythical",
+        "type_info": "Bool"
+      },
+      {
+        "ordinal": 9,
+        "name": "is_baby",
+        "type_info": "Bool"
+      },
+      {
+        "ordinal": 10,
+        "name": "capture_rate",
+        "type_info": "Int2"
+      },
+      {
+        "ordinal": 11,
+        "name": "base_happiness",
+        "type_info": "Int2"
+      },
+      {
+        "ordinal": 12,
+        "name": "growth_rate_id",
+        "type_info": "Int4"
+      },
+      {
+        "ordinal": 13,
+        "name": "egg_group_1_id",
+        "type_info": "Int4"
+      },
+      {
+        "ordinal": 14,
+        "name": "egg_group_2_id",
+        "type_info": "Int4"
+      },
+      {
+        "ordinal": 15,
+        "name": "hatch_cycles",
+        "type_info": "Int2"
+      }
+    ],
+    "parameters": {
+      "Left": [
+        "Int4",
+        "Text",
+        "Text",
+        "Float4",
+        "Int4",
+        "Int4",
+        "Int2",
+        "Bool",
+        "Bool",
+        "Bool",
+        "Int2",
+        "Int2",
+        "Int4",
+        "Int4",
+        "Int4",
+        "Int2"
+      ]
+    },
+    "nullable": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      true,
+      false
+    ]
+  },
+  "hash": "9687708537272496f32c977b0bc4d2855bac4bc29fbca00becb3967b1cf9ef00"
+}

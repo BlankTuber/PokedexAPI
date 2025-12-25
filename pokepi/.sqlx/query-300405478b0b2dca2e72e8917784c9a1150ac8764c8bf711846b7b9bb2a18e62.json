@@ -1,0 +1,14 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "\n            DELETE FROM location_areas WHERE location_area_id = $1\n            ",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Left": [
+        "Int4"
+      ]
+    },
+    "nullable": []
+  },
+  "hash": "300405478b0b2dca2e72e8917784c9a1150ac8764c8bf711846b7b9bb2a18e62"
+}

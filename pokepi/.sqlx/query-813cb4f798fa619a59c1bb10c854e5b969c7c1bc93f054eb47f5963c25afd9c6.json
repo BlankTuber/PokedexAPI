@@ -1,0 +1,14 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "\n              DELETE FROM version_groups WHERE version_group_id = $1\n            ",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Left": [
+        "Int4"
+      ]
+    },
+    "nullable": []
+  },
+  "hash": "813cb4f798fa619a59c1bb10c854e5b969c7c1bc93f054eb47f5963c25afd9c6"
+}

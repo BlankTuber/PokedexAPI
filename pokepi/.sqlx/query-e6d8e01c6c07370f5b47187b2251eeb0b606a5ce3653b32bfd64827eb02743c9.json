@@ -1,0 +1,44 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "\n            SELECT ability_id, ability_name, ability_identifier, generation_introduced, is_main_series\n            FROM abilities\n            ORDER BY ability_id\n            ",
+  "describe": {
+    "columns": [
+      {
+        "ordinal": 0,
+        "name": "ability_id",
+        "type_info": "Int4"
+      },
+      {
+        "ordinal": 1,
+        "name": "ability_name",
+        "type_info": "Text"
+      },
+      {
+        "ordinal": 2,
+        "name": "ability_identifier",
+        "type_info": "Text"
+      },
+      {
+        "ordinal": 3,
+        "name": "generation_introduced",
+        "type_info": "Int2"
+      },
+      {
+        "ordinal": 4,
+        "name": "is_main_series",
+        "type_info": "Bool"
+      }
+    ],
+    "parameters": {
+      "Left": []
+    },
+    "nullable": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
+  },
+  "hash": "e6d8e01c6c07370f5b47187b2251eeb0b606a5ce3653b32bfd64827eb02743c9"
+}

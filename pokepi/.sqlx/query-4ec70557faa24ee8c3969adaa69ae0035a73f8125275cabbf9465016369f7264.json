@@ -1,0 +1,50 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "\n            INSERT INTO pokedex_entries (national_id, form_id, game_id, pokedex_number, entry_text)\n            VALUES ($1, $2, $3, $4, $5)\n            RETURNING national_id, form_id, game_id, pokedex_number, entry_text\n            ",
+  "describe": {
+    "columns": [
+      {
+        "ordinal": 0,
+        "name": "national_id",
+        "type_info": "Int4"
+      },
+      {
+        "ordinal": 1,
+        "name": "form_id",
+        "type_info": "Int4"
+      },
+      {
+        "ordinal": 2,
+        "name": "game_id",
+        "type_info": "Int4"
+      },
+      {
+        "ordinal": 3,
+        "name": "pokedex_number",
+        "type_info": "Int4"
+      },
+      {
+        "ordinal": 4,
+        "name": "entry_text",
+        "type_info": "Text"
+      }
+    ],
+    "parameters": {
+      "Left": [
+        "Int4",
+        "Int4",
+        "Int4",
+        "Int4",
+        "Text"
+      ]
+    },
+    "nullable": [
+      false,
+      true,
+      false,
+      false,
+      false
+    ]
+  },
+  "hash": "4ec70557faa24ee8c3969adaa69ae0035a73f8125275cabbf9465016369f7264"
+}

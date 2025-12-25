@@ -1,0 +1,40 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "\n            SELECT location_id, location_name, location_identifier, region_id\n            FROM locations\n            WHERE location_id = $1\n            ",
+  "describe": {
+    "columns": [
+      {
+        "ordinal": 0,
+        "name": "location_id",
+        "type_info": "Int4"
+      },
+      {
+        "ordinal": 1,
+        "name": "location_name",
+        "type_info": "Text"
+      },
+      {
+        "ordinal": 2,
+        "name": "location_identifier",
+        "type_info": "Text"
+      },
+      {
+        "ordinal": 3,
+        "name": "region_id",
+        "type_info": "Int4"
+      }
+    ],
+    "parameters": {
+      "Left": [
+        "Int4"
+      ]
+    },
+    "nullable": [
+      false,
+      false,
+      false,
+      false
+    ]
+  },
+  "hash": "ee5d86c98942932d110c822b65247287c01a412489a518a6d3dbab34d18c28ba"
+}

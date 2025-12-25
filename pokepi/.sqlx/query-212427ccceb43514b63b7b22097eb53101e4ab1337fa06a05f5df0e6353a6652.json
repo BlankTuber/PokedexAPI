@@ -1,0 +1,14 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "\n            DELETE FROM encounter_methods WHERE encounter_method_id = $1\n            ",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Left": [
+        "Int4"
+      ]
+    },
+    "nullable": []
+  },
+  "hash": "212427ccceb43514b63b7b22097eb53101e4ab1337fa06a05f5df0e6353a6652"
+}

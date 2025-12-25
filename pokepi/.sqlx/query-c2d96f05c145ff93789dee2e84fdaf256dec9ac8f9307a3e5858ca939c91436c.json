@@ -1,0 +1,64 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "\n            SELECT game_id, game_name, game_identifier, generation, version_group_id, release_date, platform_id, is_main_series\n            FROM games\n            WHERE game_id = $1\n            ",
+  "describe": {
+    "columns": [
+      {
+        "ordinal": 0,
+        "name": "game_id",
+        "type_info": "Int4"
+      },
+      {
+        "ordinal": 1,
+        "name": "game_name",
+        "type_info": "Text"
+      },
+      {
+        "ordinal": 2,
+        "name": "game_identifier",
+        "type_info": "Text"
+      },
+      {
+        "ordinal": 3,
+        "name": "generation",
+        "type_info": "Int2"
+      },
+      {
+        "ordinal": 4,
+        "name": "version_group_id",
+        "type_info": "Int4"
+      },
+      {
+        "ordinal": 5,
+        "name": "release_date",
+        "type_info": "Date"
+      },
+      {
+        "ordinal": 6,
+        "name": "platform_id",
+        "type_info": "Int4"
+      },
+      {
+        "ordinal": 7,
+        "name": "is_main_series",
+        "type_info": "Bool"
+      }
+    ],
+    "parameters": {
+      "Left": [
+        "Int4"
+      ]
+    },
+    "nullable": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
+  },
+  "hash": "c2d96f05c145ff93789dee2e84fdaf256dec9ac8f9307a3e5858ca939c91436c"
+}

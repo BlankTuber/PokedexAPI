@@ -1,0 +1,36 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "\n            INSERT INTO type_matchups (attacking_type_id, defending_type_id, damage_factor)\n            VALUES ($1, $2, $3)\n            RETURNING attacking_type_id, defending_type_id, damage_factor\n            ",
+  "describe": {
+    "columns": [
+      {
+        "ordinal": 0,
+        "name": "attacking_type_id",
+        "type_info": "Int4"
+      },
+      {
+        "ordinal": 1,
+        "name": "defending_type_id",
+        "type_info": "Int4"
+      },
+      {
+        "ordinal": 2,
+        "name": "damage_factor",
+        "type_info": "Float4"
+      }
+    ],
+    "parameters": {
+      "Left": [
+        "Int4",
+        "Int4",
+        "Float4"
+      ]
+    },
+    "nullable": [
+      false,
+      false,
+      false
+    ]
+  },
+  "hash": "f33f890e1c630c067f95dffcc6e8ebab8b61d9881aa10fe609b1e8dd4bb5b737"
+}

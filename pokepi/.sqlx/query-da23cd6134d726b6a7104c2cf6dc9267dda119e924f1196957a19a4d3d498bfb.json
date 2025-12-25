@@ -1,0 +1,15 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "\n            DELETE FROM ability_descriptions\n            WHERE ability_id = $1 AND version_group_id = $2\n            ",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Left": [
+        "Int4",
+        "Int4"
+      ]
+    },
+    "nullable": []
+  },
+  "hash": "da23cd6134d726b6a7104c2cf6dc9267dda119e924f1196957a19a4d3d498bfb"
+}

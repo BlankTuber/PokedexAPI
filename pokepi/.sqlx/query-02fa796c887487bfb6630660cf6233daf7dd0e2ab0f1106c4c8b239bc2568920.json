@@ -1,0 +1,31 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "\n            UPDATE pokemon_form_games\n            SET is_available = COALESCE($1, is_available),\n                is_shiny_locked = COALESCE($2, is_shiny_locked),\n                height = COALESCE($3, height),\n                weight = COALESCE($4, weight),\n                base_experience = COALESCE($5, base_experience),\n                hp = CASE WHEN $6 THEN $7 ELSE hp END,\n                attack = CASE WHEN $8 THEN $9 ELSE attack END,\n                defense = CASE WHEN $10 THEN $11 ELSE defense END,\n                special_attack = CASE WHEN $12 THEN $13 ELSE special_attack END,\n                special_defense = CASE WHEN $14 THEN $15 ELSE special_defense END,\n                speed = CASE WHEN $16 THEN $17 ELSE speed END\n            WHERE pokemon_form_game_id = $18\n            ",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Left": [
+        "Bool",
+        "Bool",
+        "Float4",
+        "Float4",
+        "Int4",
+        "Bool",
+        "Int2",
+        "Bool",
+        "Int2",
+        "Bool",
+        "Int2",
+        "Bool",
+        "Int2",
+        "Bool",
+        "Int2",
+        "Bool",
+        "Int2",
+        "Int4"
+      ]
+    },
+    "nullable": []
+  },
+  "hash": "02fa796c887487bfb6630660cf6233daf7dd0e2ab0f1106c4c8b239bc2568920"
+}

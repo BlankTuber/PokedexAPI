@@ -1,0 +1,42 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "\n            INSERT INTO regions (region_name, region_identifier, generation_introduced)\n            VALUES ($1, $2, $3)\n            RETURNING region_id, region_name, region_identifier, generation_introduced\n            ",
+  "describe": {
+    "columns": [
+      {
+        "ordinal": 0,
+        "name": "region_id",
+        "type_info": "Int4"
+      },
+      {
+        "ordinal": 1,
+        "name": "region_name",
+        "type_info": "Text"
+      },
+      {
+        "ordinal": 2,
+        "name": "region_identifier",
+        "type_info": "Text"
+      },
+      {
+        "ordinal": 3,
+        "name": "generation_introduced",
+        "type_info": "Int2"
+      }
+    ],
+    "parameters": {
+      "Left": [
+        "Text",
+        "Text",
+        "Int2"
+      ]
+    },
+    "nullable": [
+      false,
+      false,
+      false,
+      false
+    ]
+  },
+  "hash": "d8714b936c60ecc1f42726cfeeaa17c2f9c62a3aabc450c54055c47c06871743"
+}

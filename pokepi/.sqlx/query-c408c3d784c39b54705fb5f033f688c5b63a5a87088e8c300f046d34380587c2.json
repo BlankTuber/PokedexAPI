@@ -1,0 +1,43 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "\n            INSERT INTO pokemon_form_abilities (pokemon_form_game_id, ability_id, slot, is_hidden)\n            VALUES ($1, $2, $3, $4)\n            RETURNING pokemon_form_game_id, ability_id, slot, is_hidden\n            ",
+  "describe": {
+    "columns": [
+      {
+        "ordinal": 0,
+        "name": "pokemon_form_game_id",
+        "type_info": "Int4"
+      },
+      {
+        "ordinal": 1,
+        "name": "ability_id",
+        "type_info": "Int4"
+      },
+      {
+        "ordinal": 2,
+        "name": "slot",
+        "type_info": "Int2"
+      },
+      {
+        "ordinal": 3,
+        "name": "is_hidden",
+        "type_info": "Bool"
+      }
+    ],
+    "parameters": {
+      "Left": [
+        "Int4",
+        "Int4",
+        "Int2",
+        "Bool"
+      ]
+    },
+    "nullable": [
+      false,
+      false,
+      false,
+      false
+    ]
+  },
+  "hash": "c408c3d784c39b54705fb5f033f688c5b63a5a87088e8c300f046d34380587c2"
+}

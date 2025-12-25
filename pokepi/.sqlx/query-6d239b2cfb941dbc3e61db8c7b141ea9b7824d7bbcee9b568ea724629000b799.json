@@ -1,0 +1,70 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "\n            INSERT INTO games (game_name, game_identifier, generation, version_group_id, release_date, platform_id, is_main_series)\n            VALUES ($1, $2, $3, $4, $5, $6, $7)\n            RETURNING game_id, game_name, game_identifier, generation, version_group_id, release_date, platform_id, is_main_series\n            ",
+  "describe": {
+    "columns": [
+      {
+        "ordinal": 0,
+        "name": "game_id",
+        "type_info": "Int4"
+      },
+      {
+        "ordinal": 1,
+        "name": "game_name",
+        "type_info": "Text"
+      },
+      {
+        "ordinal": 2,
+        "name": "game_identifier",
+        "type_info": "Text"
+      },
+      {
+        "ordinal": 3,
+        "name": "generation",
+        "type_info": "Int2"
+      },
+      {
+        "ordinal": 4,
+        "name": "version_group_id",
+        "type_info": "Int4"
+      },
+      {
+        "ordinal": 5,
+        "name": "release_date",
+        "type_info": "Date"
+      },
+      {
+        "ordinal": 6,
+        "name": "platform_id",
+        "type_info": "Int4"
+      },
+      {
+        "ordinal": 7,
+        "name": "is_main_series",
+        "type_info": "Bool"
+      }
+    ],
+    "parameters": {
+      "Left": [
+        "Text",
+        "Text",
+        "Int2",
+        "Int4",
+        "Date",
+        "Int4",
+        "Bool"
+      ]
+    },
+    "nullable": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
+  },
+  "hash": "6d239b2cfb941dbc3e61db8c7b141ea9b7824d7bbcee9b568ea724629000b799"
+}

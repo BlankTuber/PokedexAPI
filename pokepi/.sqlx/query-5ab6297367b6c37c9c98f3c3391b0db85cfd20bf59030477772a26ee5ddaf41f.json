@@ -1,0 +1,58 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "\n            SELECT encounter_id, national_id, form_id, game_id, location_area_id, encounter_method_id, chance\n            FROM encounters\n            WHERE location_area_id = $1\n            ORDER BY encounter_id\n            ",
+  "describe": {
+    "columns": [
+      {
+        "ordinal": 0,
+        "name": "encounter_id",
+        "type_info": "Int4"
+      },
+      {
+        "ordinal": 1,
+        "name": "national_id",
+        "type_info": "Int4"
+      },
+      {
+        "ordinal": 2,
+        "name": "form_id",
+        "type_info": "Int4"
+      },
+      {
+        "ordinal": 3,
+        "name": "game_id",
+        "type_info": "Int4"
+      },
+      {
+        "ordinal": 4,
+        "name": "location_area_id",
+        "type_info": "Int4"
+      },
+      {
+        "ordinal": 5,
+        "name": "encounter_method_id",
+        "type_info": "Int4"
+      },
+      {
+        "ordinal": 6,
+        "name": "chance",
+        "type_info": "Int2"
+      }
+    ],
+    "parameters": {
+      "Left": [
+        "Int4"
+      ]
+    },
+    "nullable": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
+  },
+  "hash": "5ab6297367b6c37c9c98f3c3391b0db85cfd20bf59030477772a26ee5ddaf41f"
+}

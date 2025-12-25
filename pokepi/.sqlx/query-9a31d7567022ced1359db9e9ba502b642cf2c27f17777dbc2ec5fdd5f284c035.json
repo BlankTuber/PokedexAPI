@@ -1,0 +1,34 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "\n            SELECT attacking_type_id, defending_type_id, damage_factor\n            FROM type_matchups\n            WHERE defending_type_id = $1\n            ORDER BY attacking_type_id\n            ",
+  "describe": {
+    "columns": [
+      {
+        "ordinal": 0,
+        "name": "attacking_type_id",
+        "type_info": "Int4"
+      },
+      {
+        "ordinal": 1,
+        "name": "defending_type_id",
+        "type_info": "Int4"
+      },
+      {
+        "ordinal": 2,
+        "name": "damage_factor",
+        "type_info": "Float4"
+      }
+    ],
+    "parameters": {
+      "Left": [
+        "Int4"
+      ]
+    },
+    "nullable": [
+      false,
+      false,
+      false
+    ]
+  },
+  "hash": "9a31d7567022ced1359db9e9ba502b642cf2c27f17777dbc2ec5fdd5f284c035"
+}

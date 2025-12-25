@@ -1,0 +1,64 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "\n            SELECT form_id, national_id, form_name, form_identifier, form_type, is_default, is_battle_only, sprite_name\n            FROM pokemon_forms\n            WHERE national_id = $1\n            ORDER BY form_id\n            ",
+  "describe": {
+    "columns": [
+      {
+        "ordinal": 0,
+        "name": "form_id",
+        "type_info": "Int4"
+      },
+      {
+        "ordinal": 1,
+        "name": "national_id",
+        "type_info": "Int4"
+      },
+      {
+        "ordinal": 2,
+        "name": "form_name",
+        "type_info": "Text"
+      },
+      {
+        "ordinal": 3,
+        "name": "form_identifier",
+        "type_info": "Text"
+      },
+      {
+        "ordinal": 4,
+        "name": "form_type",
+        "type_info": "Text"
+      },
+      {
+        "ordinal": 5,
+        "name": "is_default",
+        "type_info": "Bool"
+      },
+      {
+        "ordinal": 6,
+        "name": "is_battle_only",
+        "type_info": "Bool"
+      },
+      {
+        "ordinal": 7,
+        "name": "sprite_name",
+        "type_info": "Text"
+      }
+    ],
+    "parameters": {
+      "Left": [
+        "Int4"
+      ]
+    },
+    "nullable": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
+  },
+  "hash": "ef81e72d9a07d784c45a0b382c8339f9d94d8a489be97d6f99af2f7095916f41"
+}

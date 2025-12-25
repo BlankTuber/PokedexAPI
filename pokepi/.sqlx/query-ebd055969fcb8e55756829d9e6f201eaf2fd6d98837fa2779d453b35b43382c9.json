@@ -1,0 +1,17 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "\n            UPDATE relation_groups\n            SET relation_name = COALESCE($1, relation_name),\n                relation_identifier = COALESCE($2, relation_identifier),\n                relation_description = COALESCE($3, relation_description)\n            WHERE relation_group_id = $4\n            ",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Left": [
+        "Text",
+        "Text",
+        "Text",
+        "Int4"
+      ]
+    },
+    "nullable": []
+  },
+  "hash": "ebd055969fcb8e55756829d9e6f201eaf2fd6d98837fa2779d453b35b43382c9"
+}

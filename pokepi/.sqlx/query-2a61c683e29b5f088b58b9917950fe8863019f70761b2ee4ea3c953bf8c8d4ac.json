@@ -1,0 +1,16 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "\n            UPDATE encounter_methods\n            SET method_name = COALESCE($1, method_name),\n                method_identifier = COALESCE($2, method_identifier)\n            WHERE encounter_method_id = $3\n            ",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Left": [
+        "Text",
+        "Text",
+        "Int4"
+      ]
+    },
+    "nullable": []
+  },
+  "hash": "2a61c683e29b5f088b58b9917950fe8863019f70761b2ee4ea3c953bf8c8d4ac"
+}

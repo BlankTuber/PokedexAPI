@@ -1,0 +1,17 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "\n            UPDATE regional_pokedexes\n            SET pokedex_name = COALESCE($1, pokedex_name),\n                pokedex_identifier = COALESCE($2, pokedex_identifier),\n                is_main_series = COALESCE($3, is_main_series)\n            WHERE pokedex_id = $4\n            ",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Left": [
+        "Text",
+        "Text",
+        "Bool",
+        "Int4"
+      ]
+    },
+    "nullable": []
+  },
+  "hash": "cabf4079a32f52cfcb1b27a204dfe13dfd7811d877c831e498a6afc8103ffcdc"
+}

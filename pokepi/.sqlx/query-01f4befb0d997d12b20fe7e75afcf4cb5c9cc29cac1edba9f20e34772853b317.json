@@ -1,0 +1,16 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "\n            UPDATE type_matchups\n            SET damage_factor = COALESCE($1, damage_factor)\n            WHERE attacking_type_id = $2 AND defending_type_id = $3\n            ",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Left": [
+        "Float4",
+        "Int4",
+        "Int4"
+      ]
+    },
+    "nullable": []
+  },
+  "hash": "01f4befb0d997d12b20fe7e75afcf4cb5c9cc29cac1edba9f20e34772853b317"
+}

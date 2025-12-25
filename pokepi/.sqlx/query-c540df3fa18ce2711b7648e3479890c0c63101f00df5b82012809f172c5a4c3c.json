@@ -1,0 +1,42 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "\n              INSERT INTO version_groups (version_group_name, version_group_identifier, generation)\n              VALUES ($1, $2, $3)\n              RETURNING version_group_id, version_group_name, version_group_identifier, generation\n            ",
+  "describe": {
+    "columns": [
+      {
+        "ordinal": 0,
+        "name": "version_group_id",
+        "type_info": "Int4"
+      },
+      {
+        "ordinal": 1,
+        "name": "version_group_name",
+        "type_info": "Text"
+      },
+      {
+        "ordinal": 2,
+        "name": "version_group_identifier",
+        "type_info": "Text"
+      },
+      {
+        "ordinal": 3,
+        "name": "generation",
+        "type_info": "Int2"
+      }
+    ],
+    "parameters": {
+      "Left": [
+        "Text",
+        "Text",
+        "Int2"
+      ]
+    },
+    "nullable": [
+      false,
+      false,
+      false,
+      false
+    ]
+  },
+  "hash": "c540df3fa18ce2711b7648e3479890c0c63101f00df5b82012809f172c5a4c3c"
+}

@@ -1,0 +1,52 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "\n            SELECT pokedex_id, pokedex_name, pokedex_identifier, region_id, version_group_id, is_main_series\n            FROM regional_pokedexes\n            WHERE pokedex_id = $1\n            ",
+  "describe": {
+    "columns": [
+      {
+        "ordinal": 0,
+        "name": "pokedex_id",
+        "type_info": "Int4"
+      },
+      {
+        "ordinal": 1,
+        "name": "pokedex_name",
+        "type_info": "Text"
+      },
+      {
+        "ordinal": 2,
+        "name": "pokedex_identifier",
+        "type_info": "Text"
+      },
+      {
+        "ordinal": 3,
+        "name": "region_id",
+        "type_info": "Int4"
+      },
+      {
+        "ordinal": 4,
+        "name": "version_group_id",
+        "type_info": "Int4"
+      },
+      {
+        "ordinal": 5,
+        "name": "is_main_series",
+        "type_info": "Bool"
+      }
+    ],
+    "parameters": {
+      "Left": [
+        "Int4"
+      ]
+    },
+    "nullable": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
+  },
+  "hash": "95bf2203bb62fd993e60ab99c39ae364b9204e07792bbffbbf62a6f99bc8c19a"
+}

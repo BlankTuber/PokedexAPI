@@ -1,0 +1,40 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "\n              SELECT version_group_id, version_group_name, version_group_identifier, generation\n              FROM version_groups\n              WHERE version_group_id = $1\n            ",
+  "describe": {
+    "columns": [
+      {
+        "ordinal": 0,
+        "name": "version_group_id",
+        "type_info": "Int4"
+      },
+      {
+        "ordinal": 1,
+        "name": "version_group_name",
+        "type_info": "Text"
+      },
+      {
+        "ordinal": 2,
+        "name": "version_group_identifier",
+        "type_info": "Text"
+      },
+      {
+        "ordinal": 3,
+        "name": "generation",
+        "type_info": "Int2"
+      }
+    ],
+    "parameters": {
+      "Left": [
+        "Int4"
+      ]
+    },
+    "nullable": [
+      false,
+      false,
+      false,
+      false
+    ]
+  },
+  "hash": "c8f2add7a7c3e4361f23515b35a0d8daf4308a8e7ed42521d0a845364e88287b"
+}

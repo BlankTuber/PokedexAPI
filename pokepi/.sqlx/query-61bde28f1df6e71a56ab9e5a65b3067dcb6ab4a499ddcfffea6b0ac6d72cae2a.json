@@ -1,0 +1,70 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "\n            INSERT INTO pokemon_forms (national_id, form_name, form_identifier, form_type, is_default, is_battle_only, sprite_name)\n            VALUES ($1, $2, $3, $4, $5, $6, $7)\n            RETURNING form_id, national_id, form_name, form_identifier, form_type, is_default, is_battle_only, sprite_name\n            ",
+  "describe": {
+    "columns": [
+      {
+        "ordinal": 0,
+        "name": "form_id",
+        "type_info": "Int4"
+      },
+      {
+        "ordinal": 1,
+        "name": "national_id",
+        "type_info": "Int4"
+      },
+      {
+        "ordinal": 2,
+        "name": "form_name",
+        "type_info": "Text"
+      },
+      {
+        "ordinal": 3,
+        "name": "form_identifier",
+        "type_info": "Text"
+      },
+      {
+        "ordinal": 4,
+        "name": "form_type",
+        "type_info": "Text"
+      },
+      {
+        "ordinal": 5,
+        "name": "is_default",
+        "type_info": "Bool"
+      },
+      {
+        "ordinal": 6,
+        "name": "is_battle_only",
+        "type_info": "Bool"
+      },
+      {
+        "ordinal": 7,
+        "name": "sprite_name",
+        "type_info": "Text"
+      }
+    ],
+    "parameters": {
+      "Left": [
+        "Int4",
+        "Text",
+        "Text",
+        "Text",
+        "Bool",
+        "Bool",
+        "Text"
+      ]
+    },
+    "nullable": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
+  },
+  "hash": "61bde28f1df6e71a56ab9e5a65b3067dcb6ab4a499ddcfffea6b0ac6d72cae2a"
+}

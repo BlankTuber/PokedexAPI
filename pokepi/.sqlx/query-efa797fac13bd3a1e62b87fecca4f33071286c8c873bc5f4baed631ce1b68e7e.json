@@ -1,0 +1,14 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "\n            DELETE FROM relation_groups WHERE relation_group_id = $1\n            ",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Left": [
+        "Int4"
+      ]
+    },
+    "nullable": []
+  },
+  "hash": "efa797fac13bd3a1e62b87fecca4f33071286c8c873bc5f4baed631ce1b68e7e"
+}

@@ -1,0 +1,63 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "\n            INSERT INTO encounters (national_id, form_id, game_id, location_area_id, encounter_method_id, chance)\n            VALUES ($1, $2, $3, $4, $5, $6)\n            RETURNING encounter_id, national_id, form_id, game_id, location_area_id, encounter_method_id, chance\n            ",
+  "describe": {
+    "columns": [
+      {
+        "ordinal": 0,
+        "name": "encounter_id",
+        "type_info": "Int4"
+      },
+      {
+        "ordinal": 1,
+        "name": "national_id",
+        "type_info": "Int4"
+      },
+      {
+        "ordinal": 2,
+        "name": "form_id",
+        "type_info": "Int4"
+      },
+      {
+        "ordinal": 3,
+        "name": "game_id",
+        "type_info": "Int4"
+      },
+      {
+        "ordinal": 4,
+        "name": "location_area_id",
+        "type_info": "Int4"
+      },
+      {
+        "ordinal": 5,
+        "name": "encounter_method_id",
+        "type_info": "Int4"
+      },
+      {
+        "ordinal": 6,
+        "name": "chance",
+        "type_info": "Int2"
+      }
+    ],
+    "parameters": {
+      "Left": [
+        "Int4",
+        "Int4",
+        "Int4",
+        "Int4",
+        "Int4",
+        "Int2"
+      ]
+    },
+    "nullable": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
+  },
+  "hash": "84da20c0838f0812bcb7781e9ee9cc98023c1415474dfda61236aac11d946df6"
+}

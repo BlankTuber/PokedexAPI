@@ -1,0 +1,16 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "\n            UPDATE encounter_condition_values\n            SET value_name = COALESCE($1, value_name),\n                value_identifier = COALESCE($2, value_identifier)\n            WHERE encounter_condition_value_id = $3\n            ",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Left": [
+        "Text",
+        "Text",
+        "Int4"
+      ]
+    },
+    "nullable": []
+  },
+  "hash": "1b728db9d7f8dab115c4528c0ffca1c335e9531c2087502324245ec3a6efe8a0"
+}

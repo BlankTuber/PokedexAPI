@@ -1,0 +1,40 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "\n            SELECT location_area_id, location_id, area_name, area_identifier\n            FROM location_areas\n            WHERE location_id = $1\n            ORDER BY location_area_id\n            ",
+  "describe": {
+    "columns": [
+      {
+        "ordinal": 0,
+        "name": "location_area_id",
+        "type_info": "Int4"
+      },
+      {
+        "ordinal": 1,
+        "name": "location_id",
+        "type_info": "Int4"
+      },
+      {
+        "ordinal": 2,
+        "name": "area_name",
+        "type_info": "Text"
+      },
+      {
+        "ordinal": 3,
+        "name": "area_identifier",
+        "type_info": "Text"
+      }
+    ],
+    "parameters": {
+      "Left": [
+        "Int4"
+      ]
+    },
+    "nullable": [
+      false,
+      false,
+      false,
+      false
+    ]
+  },
+  "hash": "59c8e48a11d4cd1668f83932889def5fde08f74cae073dd722b27b853f6eb3d3"
+}

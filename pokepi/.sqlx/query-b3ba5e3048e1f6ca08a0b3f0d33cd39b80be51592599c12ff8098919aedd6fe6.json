@@ -1,0 +1,35 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "\n            INSERT INTO encounter_methods (method_name, method_identifier)\n            VALUES ($1, $2)\n            RETURNING encounter_method_id, method_name, method_identifier\n            ",
+  "describe": {
+    "columns": [
+      {
+        "ordinal": 0,
+        "name": "encounter_method_id",
+        "type_info": "Int4"
+      },
+      {
+        "ordinal": 1,
+        "name": "method_name",
+        "type_info": "Text"
+      },
+      {
+        "ordinal": 2,
+        "name": "method_identifier",
+        "type_info": "Text"
+      }
+    ],
+    "parameters": {
+      "Left": [
+        "Text",
+        "Text"
+      ]
+    },
+    "nullable": [
+      false,
+      false,
+      false
+    ]
+  },
+  "hash": "b3ba5e3048e1f6ca08a0b3f0d33cd39b80be51592599c12ff8098919aedd6fe6"
+}

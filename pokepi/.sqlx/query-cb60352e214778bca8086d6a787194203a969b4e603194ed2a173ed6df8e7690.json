@@ -1,0 +1,15 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "\n            DELETE FROM pokemon_form_types\n            WHERE pokemon_form_game_id = $1 AND type_id = $2\n            ",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Left": [
+        "Int4",
+        "Int4"
+      ]
+    },
+    "nullable": []
+  },
+  "hash": "cb60352e214778bca8086d6a787194203a969b4e603194ed2a173ed6df8e7690"
+}

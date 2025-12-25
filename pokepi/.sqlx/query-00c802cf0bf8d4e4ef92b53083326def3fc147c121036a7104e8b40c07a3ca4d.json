@@ -1,0 +1,42 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "\n            INSERT INTO location_areas (location_id, area_name, area_identifier)\n            VALUES ($1, $2, $3)\n            RETURNING location_area_id, location_id, area_name, area_identifier\n            ",
+  "describe": {
+    "columns": [
+      {
+        "ordinal": 0,
+        "name": "location_area_id",
+        "type_info": "Int4"
+      },
+      {
+        "ordinal": 1,
+        "name": "location_id",
+        "type_info": "Int4"
+      },
+      {
+        "ordinal": 2,
+        "name": "area_name",
+        "type_info": "Text"
+      },
+      {
+        "ordinal": 3,
+        "name": "area_identifier",
+        "type_info": "Text"
+      }
+    ],
+    "parameters": {
+      "Left": [
+        "Int4",
+        "Text",
+        "Text"
+      ]
+    },
+    "nullable": [
+      false,
+      false,
+      false,
+      false
+    ]
+  },
+  "hash": "00c802cf0bf8d4e4ef92b53083326def3fc147c121036a7104e8b40c07a3ca4d"
+}

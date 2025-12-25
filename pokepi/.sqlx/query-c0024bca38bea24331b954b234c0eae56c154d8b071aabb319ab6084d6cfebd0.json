@@ -1,0 +1,26 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "\n            SELECT encounter_id, encounter_condition_value_id\n            FROM encounter_conditions\n            ORDER BY encounter_id, encounter_condition_value_id\n            ",
+  "describe": {
+    "columns": [
+      {
+        "ordinal": 0,
+        "name": "encounter_id",
+        "type_info": "Int4"
+      },
+      {
+        "ordinal": 1,
+        "name": "encounter_condition_value_id",
+        "type_info": "Int4"
+      }
+    ],
+    "parameters": {
+      "Left": []
+    },
+    "nullable": [
+      false,
+      false
+    ]
+  },
+  "hash": "c0024bca38bea24331b954b234c0eae56c154d8b071aabb319ab6084d6cfebd0"
+}
