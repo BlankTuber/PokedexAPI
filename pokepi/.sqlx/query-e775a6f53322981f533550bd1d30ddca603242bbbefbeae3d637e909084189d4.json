@@ -1,0 +1,34 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "\n              SELECT platform_id, platform_name, platform_identifier\n              FROM platforms\n              WHERE platform_id = $1\n            ",
+  "describe": {
+    "columns": [
+      {
+        "ordinal": 0,
+        "name": "platform_id",
+        "type_info": "Int4"
+      },
+      {
+        "ordinal": 1,
+        "name": "platform_name",
+        "type_info": "Text"
+      },
+      {
+        "ordinal": 2,
+        "name": "platform_identifier",
+        "type_info": "Text"
+      }
+    ],
+    "parameters": {
+      "Left": [
+        "Int4"
+      ]
+    },
+    "nullable": [
+      false,
+      false,
+      false
+    ]
+  },
+  "hash": "e775a6f53322981f533550bd1d30ddca603242bbbefbeae3d637e909084189d4"
+}

@@ -1,0 +1,35 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "\n              INSERT INTO platforms (platform_name, platform_identifier)\n              VALUES ($1, $2)\n              RETURNING platform_id, platform_name, platform_identifier\n            ",
+  "describe": {
+    "columns": [
+      {
+        "ordinal": 0,
+        "name": "platform_id",
+        "type_info": "Int4"
+      },
+      {
+        "ordinal": 1,
+        "name": "platform_name",
+        "type_info": "Text"
+      },
+      {
+        "ordinal": 2,
+        "name": "platform_identifier",
+        "type_info": "Text"
+      }
+    ],
+    "parameters": {
+      "Left": [
+        "Text",
+        "Text"
+      ]
+    },
+    "nullable": [
+      false,
+      false,
+      false
+    ]
+  },
+  "hash": "ee8fd3a90622a62a669e2d55cf210e2507e3de56a849b21a41e604e2b17c244b"
+}

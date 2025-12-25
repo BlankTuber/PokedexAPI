@@ -3,7 +3,7 @@ use rocket::Route;
 pub mod pokemon;
 // pub mod combat;
 pub mod breeding;
-// pub mod game_data;
+pub mod games;
 // pub mod world;
 // pub mod encounters;
 // pub mod pokedex;
@@ -20,9 +20,9 @@ pub fn breeding_routes() -> Vec<Route> {
     breeding::routes()
 }
 
-// pub fn game_data_routes() -> Vec<Route> {
-//     game_data::routes()
-// }
+pub fn games_routes() -> Vec<Route> {
+    games::routes()
+}
 
 // pub fn world_routes() -> Vec<Route> {
 //     world::routes()

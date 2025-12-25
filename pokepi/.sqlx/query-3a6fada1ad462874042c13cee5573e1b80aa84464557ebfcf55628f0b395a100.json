@@ -1,0 +1,16 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "\n              UPDATE platforms\n              SET platform_name = COALESCE($1, platform_name),\n                  platform_identifier = COALESCE($2, platform_identifier)\n              WHERE platform_id = $3\n            ",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Left": [
+        "Text",
+        "Text",
+        "Int4"
+      ]
+    },
+    "nullable": []
+  },
+  "hash": "3a6fada1ad462874042c13cee5573e1b80aa84464557ebfcf55628f0b395a100"
+}

@@ -1,0 +1,14 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "\n              DELETE FROM platforms WHERE platform_id = $1\n            ",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Left": [
+        "Int4"
+      ]
+    },
+    "nullable": []
+  },
+  "hash": "d64003f3fa54bd078050652821b52b063d8ca145b0d9f6b31221d5d03fcdfcf5"
+}
