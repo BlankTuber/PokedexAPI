@@ -1,5 +1,29 @@
-# PokedexAPI
+# PokePI
 
-A big API that allows you to make a pokedex. Use it however you want.
+REST API for managing Pokémon data. Covers pokemon, forms, types, abilities, games, regions, encounters, breeding info, and pokedex entries.
 
-Yes, it was finished by Claude Code after the foundation was made, as I wanted this project completed before the end of the year (2025)
+## Routes
+
+| Base Path     | What it covers                                                |
+|---------------|---------------------------------------------------------------|
+| `/breeding`   | Egg groups, growth rates                                      |
+| `/pokemon`    | Pokemon, forms, form-games, relation groups, evolution chains |
+| `/combat`     | Types, abilities, type matchups, ability descriptions         |
+| `/games`      | Games, platforms, version groups                              |
+| `/world`      | Regions, locations, location areas                            |
+| `/encounters` | Encounters, methods, conditions                               |
+| `/pokedex`    | Pokedex entries, regional pokedexes, pokedex numbers          |
+
+All resources support standard CRUD operations (POST, GET, PATCH, DELETE).
+
+## Tech
+
+- Rust
+- Rocket (web framework)
+- SQLx (database)
+- PostgreSQL
+
+## Notice
+
+- After realizing the scale of the project, and my desire to explore outside of APIs, I let Claude Code (AI Agent) help with the majority of the routes, tho it worked based on my original few routes.
+- Feel free to use the API however you want, but I will personally not host it.
